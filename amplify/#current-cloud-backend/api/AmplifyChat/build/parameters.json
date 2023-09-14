@@ -1,0 +1,13 @@
+{
+    "AppSyncApiName": "AmplifyChat",
+    "DynamoDBBillingMode": "PAY_PER_REQUEST",
+    "DynamoDBEnableServerSideEncryption": false,
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "unauthRoleName": {
+        "Ref": "UnauthRoleName"
+    },
+    "S3DeploymentBucket": "amplify-amplifychat-staging-73307-deployment",
+    "S3DeploymentRootKey": "amplify-appsync-files/014a7dd10c8ebeebb619acc0ee56f028a93aeec3"
+}
