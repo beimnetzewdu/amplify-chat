@@ -1,0 +1,91 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-amplifychat-staging-73307-authRole",
+      "UnauthRoleArn": "arn:aws:iam::909137635878:role/amplify-amplifychat-staging-73307-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::909137635878:role/amplify-amplifychat-staging-73307-authRole",
+      "Region": "eu-north-1",
+      "DeploymentBucketName": "amplify-amplifychat-staging-73307-deployment",
+      "UnauthRoleName": "amplify-amplifychat-staging-73307-unauthRole",
+      "StackName": "amplify-amplifychat-staging-73307",
+      "StackId": "arn:aws:cloudformation:eu-north-1:909137635878:stack/amplify-amplifychat-staging-73307/f3174dd0-52d0-11ee-ada0-0a1ba922343c",
+      "AmplifyAppId": "dqnu8n9ccmnou"
+    }
+  },
+  "api": {
+    "AmplifyChat": {
+      "dependsOn": [],
+      "output": {
+        "authConfig": {
+          "additionalAuthenticationProviders": [
+            {
+              "authenticationType": "AWS_IAM"
+            }
+          ],
+          "defaultAuthentication": {
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 30,
+              "description": "api key description"
+            },
+            "authenticationType": "API_KEY"
+          }
+        },
+        "GraphQLAPIIdOutput": "35jq3gnth5cjxk74swuqlkiobu",
+        "GraphQLAPIEndpointOutput": "https://rxbgxia5tnbxlazh3tqzfx5dx4.appsync-api.eu-north-1.amazonaws.com/graphql",
+        "GraphQLAPIKeyOutput": "da2-wj5kykhn6fgbtay2zhh2i3qtwy"
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "AppSync",
+      "lastPushTimeStamp": "2023-09-14T07:59:45.985Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-amplifychat-staging-73307-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "logicalId": "apiAmplifyChat"
+      }
+    }
+  },
+  "auth": {
+    "AmplifyChat": {
+      "customAuth": false,
+      "dependsOn": [],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": [
+            "REQUIRES_LOWERCASE",
+            "REQUIRES_NUMBERS",
+            "REQUIRES_SYMBOLS",
+            "REQUIRES_UPPERCASE"
+          ]
+        },
+        "signupAttributes": [],
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito",
+      "output": {
+        "UserPoolId": "eu-north-1_p6g4fUiGH",
+        "AppClientIDWeb": "1vk7o9eiuoimf711er6vkt7gbj",
+        "AppClientID": "4koc1hmt6pkn46i80621q4plar",
+        "IdentityPoolId": "eu-north-1:617af54b-778e-444d-9721-bff8a80a9b9f",
+        "UserPoolArn": "arn:aws:cognito-idp:eu-north-1:909137635878:userpool/eu-north-1_p6g4fUiGH",
+        "IdentityPoolName": "testAuthIdentityPool__staging",
+        "UserPoolName": "AmplifyChat"
+      },
+      "lastPushTimeStamp": "2023-09-14T07:59:45.994Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-amplifychat-staging-73307-deployment/amplify-cfn-templates/auth/AmplifyChat-cloudformation-template.json",
+        "logicalId": "authAmplifyChat"
+      }
+    }
+  }
+}
