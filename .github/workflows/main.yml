@@ -13,9 +13,9 @@ jobs:
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
-          aws-access-key-id:"AKIA5HLGTNITM5H5BKUW"
-          aws-secret-access-key:"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"
-          aws-region:ap-south-1
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ap-south-1
 
   continuous-deployment:
     runs-on: ubuntu-latest
@@ -26,9 +26,9 @@ jobs:
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
-          aws-access-key-id:"AKIA5HLGTNITM5H5BKUW"
-          aws-secret-access-key:"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"
-          aws-region:ap-south-1
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ap-south-1
      # Step 2
       - name: Create CodeDeploy Deployment
         id: deploy
