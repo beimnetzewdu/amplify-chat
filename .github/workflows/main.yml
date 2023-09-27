@@ -40,8 +40,7 @@ jobs:
      # Step 2
       - name: Create CodeDeploy Deployment
         id: deploy
-        run: |
-          aws deploy create-deployment \
+        run: aws deploy create-deployment \
             --application-name GreSISAmplifyChat \
             --deployment-group-name GreSISAmplifyChatGroup \
             --deployment-config-name CodeDeployDefault.OneAtATime \
