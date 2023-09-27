@@ -44,4 +44,4 @@ jobs:
             --application-name GreSISAmplifyChat \
             --deployment-group-name GreSISAmplifyChatGroup \
             --deployment-config-name CodeDeployDefault.OneAtATime \
-            --github-location repository=${{ beimnetzewdu/amplify-chat }},commitId=${{ 5236582ac686dd21d7e770267fc39c9b88f84f63 }}
+            --github-location repository=${{ "beimnetzewdu/amplify-chat" }},commitId=${{ 5236582ac686dd21d7e770267fc39c9b88f84f63 }}
