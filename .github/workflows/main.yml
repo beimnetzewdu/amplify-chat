@@ -34,6 +34,7 @@ jobs:
         id: deploy
         run: |
             aws deploy create-deployment \
+            --application-name GreSISAmplifyChat \
             --deployment-group-name GreSISAmplifyChatGroup \
             --deployment-config-name CodeDeployDefault.OneAtATime \
             --github-location repository=${{ github.repository }},commitId=${{ github.sha }}
