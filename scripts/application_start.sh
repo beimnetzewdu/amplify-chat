@@ -4,4 +4,4 @@ cd /home/ubuntu/amplify-chat
 
 npm install
 
-npm start
+node src/app.js > app.out.log 2> app.err.log < /dev/null & 
