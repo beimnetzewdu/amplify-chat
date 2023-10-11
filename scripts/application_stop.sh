@@ -2,6 +2,6 @@
 
 # cd /home/ubuntu/amplify-chat
 
-echo "Stopping any existing node servers"
+echo "Stopping any existing node server"
 
 
