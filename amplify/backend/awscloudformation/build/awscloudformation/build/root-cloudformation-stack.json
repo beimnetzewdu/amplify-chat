@@ -152,10 +152,30 @@
         }
       }
     },
+    "apiAmplifyChat": {
+      "Type": "AWS::CloudFormation::Stack",
+      "Properties": {
+        "TemplateURL": "https://s3.amazonaws.com/amplify-amplifychat-dev-103538-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "Parameters": {
+          "AppSyncApiName": "AmplifyChat",
+          "DynamoDBBillingMode": "PAY_PER_REQUEST",
+          "DynamoDBEnableServerSideEncryption": false,
+          "authRoleName": {
+            "Ref": "AuthRoleName"
+          },
+          "unauthRoleName": {
+            "Ref": "UnauthRoleName"
+          },
+          "S3DeploymentBucket": "amplify-amplifychat-dev-103538-deployment",
+          "S3DeploymentRootKey": "amplify-appsync-files/014a7dd10c8ebeebb619acc0ee56f028a93aeec3",
+          "env": "dev"
+        }
+      }
+    },
     "authAmplifyChat": {
       "Type": "AWS::CloudFormation::Stack",
       "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-amplifychat-staging-73307-deployment/amplify-cfn-templates/auth/AmplifyChat-cloudformation-template.json",
+        "TemplateURL": "https://s3.amazonaws.com/amplify-amplifychat-dev-103538-deployment/amplify-cfn-templates/auth/AmplifyChat-cloudformation-template.json",
         "Parameters": {
           "identityPoolName": "testAuthIdentityPool",
           "allowUnauthenticatedIdentities": false,
@@ -206,27 +226,7 @@
           },
           "breakCircularDependency": true,
           "dependsOn": "",
-          "env": "staging"
-        }
-      }
-    },
-    "apiAmplifyChat": {
-      "Type": "AWS::CloudFormation::Stack",
-      "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-amplifychat-staging-73307-deployment/amplify-cfn-templates/api/cloudformation-template.json",
-        "Parameters": {
-          "AppSyncApiName": "AmplifyChat",
-          "DynamoDBBillingMode": "PAY_PER_REQUEST",
-          "DynamoDBEnableServerSideEncryption": false,
-          "authRoleName": {
-            "Ref": "AuthRoleName"
-          },
-          "unauthRoleName": {
-            "Ref": "UnauthRoleName"
-          },
-          "S3DeploymentBucket": "amplify-amplifychat-staging-73307-deployment",
-          "S3DeploymentRootKey": "amplify-appsync-files/014a7dd10c8ebeebb619acc0ee56f028a93aeec3",
-          "env": "staging"
+          "env": "dev"
         }
       }
     },
