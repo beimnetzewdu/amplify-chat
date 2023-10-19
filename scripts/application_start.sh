@@ -6,4 +6,4 @@ cd /home/ubuntu/amplify-chat
 
 echo "application started"
  
-npm start
+# npm start
