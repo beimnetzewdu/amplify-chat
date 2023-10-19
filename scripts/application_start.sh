@@ -2,8 +2,8 @@ sudo chmod -R 777 /home/ubuntu/amplify-chat
 
 cd /home/ubuntu/amplify-chat
 
-npm install --legacy-peer-deps
+# npm install --legacy-peer-deps
 
 echo "application started"
-
-# npm start
+ 
+npm start
