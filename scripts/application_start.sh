@@ -5,5 +5,3 @@ cd /home/ubuntu/amplify-chat
 npm install --legacy-peer-deps
 
 echo "application started"
-
-npm start
