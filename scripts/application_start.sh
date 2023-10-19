@@ -6,4 +6,4 @@ npm install --legacy-peer-deps
 
 echo "application started"
 
-npm start
+# npm start
